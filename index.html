@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101e35">
+  <meta name="description" content="MY GEDA.academy — apprendre le trading étape par étape.">
+  <title>MY GEDA.academy | Apprendre le trading</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="Accueil MY GEDA academy">
+    <span class="brand-icon">G</span><span>MY GEDA<span class="accent">.academy</span></span>
+  </a>
+  <button id="menuToggle" class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  <nav id="navLinks">
+    <a href="#formations">Formations</a><a href="#methode">Notre approche</a><a href="#connexion">Mon espace</a>
+  </nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="eyebrow">ACADÉMIE DE TRADING</div>
+    <h1>Le trading s’apprend.<br><span>Étape par étape.</span></h1>
+    <p>Des cours accessibles, des exercices et une méthode pour apprendre à ton rythme.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#formations">Découvrir les cours</a>
+      <a class="button ghost" href="#methode">Notre approche</a>
+    </div>
+    <div class="hero-note">Formation éducative · Débutants bienvenus</div>
+  </section>
+
+  <section class="section" id="formations">
+    <div class="section-heading">
+      <div><div class="eyebrow">APPRENDS À TON RYTHME</div><h2>Nos formations</h2></div>
+      <p>Commence par les bases gratuites.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrer les cours">
+      <button class="filter active" data-filter="all">Tout</button>
+      <button class="filter" data-filter="free">Gratuit</button>
+      <button class="filter" data-filter="premium">Premium (aperçu)</button>
+    </div>
+    <div id="courseGrid" class="course-grid"></div>
+    <p id="emptyState" class="empty hidden">Aucun cours dans cette catégorie.</p>
+  </section>
+
+  <section class="method" id="methode">
+    <div class="method-copy">
+      <div class="eyebrow">UNE MÉTHODE CLAIRE</div>
+      <h2>Comprendre avant de risquer.</h2>
+      <p>Nous privilégions les connaissances, la pratique en compte démo et la gestion du risque. Aucun cours ne garantit des profits.</p>
+    </div>
+    <div class="method-points">
+      <div><span>01</span><p><b>Apprendre</b><br>Des leçons simples et progressives.</p></div>
+      <div><span>02</span><p><b>Pratiquer</b><br>Des exemples et exercices en démo.</p></div>
+      <div><span>03</span><p><b>Progresser</b><br>Réviser et suivre son parcours.</p></div>
+    </div>
+  </section>
+
+  <section class="section join" id="connexion">
+    <div>
+      <div class="eyebrow">ESPACE ÉLÈVE</div>
+      <h2>Ton parcours commence ici.</h2>
+      <p>Cette maquette ne crée pas encore de compte. L'inscription sécurisée sera ajoutée dans la prochaine version.</p>
+    </div>
+    <button class="button primary" id="interestButton">Je suis intéressé</button>
+  </section>
+</main>
+<footer>
+  <div class="brand footer-brand"><span class="brand-icon">G</span><span>MY GEDA<span class="accent">.academy</span></span></div>
+  <p>Apprendre avec méthode. Progresser avec prudence.</p>
+  <small>© <span id="year"></span> MY GEDA.academy · Contenu éducatif, pas un conseil financier.</small>
+</footer>
+
+<dialog id="courseDialog" class="course-dialog">
+  <button class="dialog-close" id="dialogClose" aria-label="Fermer">×</button>
+  <div id="dialogContent"></div>
+</dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
